@@ -2,14 +2,14 @@ import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDRn7A6fo9MK0UdctpusQ0iDLVY7GCLULI",
-    authDomain: "news-aggregator-d4c9a.firebaseapp.com",
-    projectId: "news-aggregator-d4c9a",
-    storageBucket: "news-aggregator-d4c9a.firebasestorage.app",
-    messagingSenderId: "540678123706",
-    appId: "1:540678123706:web:60aac6896b0e67b78f9283",
-    measurementId: "G-6BX46GM9D4"
-  };
+  apiKey: "AIzaSyAZzE5VmZt_UqAt2GvG3FdTYdwaGf9NtrM",
+  authDomain: "fitness-tracker-99f9e.firebaseapp.com",
+  projectId: "fitness-tracker-99f9e",
+  storageBucket: "fitness-tracker-99f9e.firebasestorage.app",
+  messagingSenderId: "304135597636",
+  appId: "1:304135597636:web:a26aabfa920ff60626d611",
+  measurementId: "G-V7FRRWCFVE"
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
