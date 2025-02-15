@@ -1,16 +1,33 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { auth } from "./firebase"; // Adjust this path according to your project structure
+import { auth } from "./firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
+import axios from "axios";
 
 function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isDashboardRunning, setIsDashboardRunning] = useState(false);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setIsLoggedIn(!!user);
     });
     return () => unsubscribe();
+  }, []);
+
+  useEffect(() => {
+    const checkDashboardStatus = async () => {
+      try {
+        await axios.get("http://localhost:3001");
+        setIsDashboardRunning(true);
+      } catch (error) {
+        setIsDashboardRunning(false);
+      }
+    };
+
+    checkDashboardStatus();
+    const intervalId = setInterval(checkDashboardStatus, 5000);
+    return () => clearInterval(intervalId);
   }, []);
 
   const handleLogout = async () => {
@@ -74,6 +91,13 @@ function Navbar() {
                   Support
                 </Link>
               </li>
+              {isDashboardRunning && (
+                <li className="nav-item">
+                  <Link className="nav-link active" to="/dashboard">
+                    Dashboard
+                  </Link>
+                </li>
+              )}
               {isLoggedIn && (
                 <li className="nav-item">
                   <span className="nav-link active" onClick={handleLogout} style={{ cursor: "pointer" }}>

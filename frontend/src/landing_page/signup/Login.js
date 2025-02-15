@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { auth } from '../firebase'; // Adjust this path according to your project structure
+import { auth } from '../firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 
 
