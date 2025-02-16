@@ -1,0 +1,48 @@
+.orders {
+    padding: 20px;
+  }
+  
+  .orders-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .new-gtt-btn,
+  .download-btn {
+    padding: 8px 16px;
+    margin-left: 10px;
+  }
+  
+  .search-bar {
+    flex: 1;
+    margin-left: 20px;
+    padding: 8px;
+  }
+  
+  .orders-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .orders-table th,
+  .orders-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .order-type.sell {
+    color: red;
+  }
+  
+  .order-type.buy {
+    color: green;
+  }
+  
+  .status.active {
+    color: green;
+    font-weight: bold;
+  }
+  

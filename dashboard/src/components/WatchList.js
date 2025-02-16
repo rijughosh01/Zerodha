@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import axios from "axios";
+// import axios from "axios";
 import GeneralContext from "./GeneralContext";
 import { Tooltip, Grow } from "@mui/material";
 import {
@@ -51,7 +51,7 @@ const WatchList = () => {
           placeholder="Search eg:infy, bse, nifty fut weekly, gold mcx"
           className="search"
         />
-        <span className="counts"> {watchlist.length} / 50</span>
+        <span className="counts"> {watchlist.length} / 100</span>
       </div>
 
       <ul className="list">
