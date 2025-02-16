@@ -19,6 +19,14 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+const corsOptions = {
+  origin: "https://my-dashboard-eight-wine.vercel.app/",
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
+
+
 app.get("/addHoldings", async (req, res) => {
   let tempHoldings = [
     {
