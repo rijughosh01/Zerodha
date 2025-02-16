@@ -8,7 +8,6 @@ const Holdings = () => {
   useEffect(() => {
     axios.get("https://my-backend-phi.vercel.app/allHoldings")
       .then((res) => {
-        console.log("Data fetched:", res.data); 
         setAllHoldings(res.data);
       })
       .catch((error) => {
