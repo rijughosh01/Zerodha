@@ -15,7 +15,7 @@ import Navbar from "./landing_page/Navbar";
 import Footer from "./landing_page/Footer";
 
 const DashboardRedirect = () => {
-  window.location.replace('http://localhost:3001');
+  window.location.replace('https://my-dashboard-eight-wine.vercel.app/');
   return null;
 };
 

@@ -11,7 +11,6 @@ const Orders = () => {
     "BPCL", "DIVISLAB", "HEROMOTOCO", "ONGC", "NTPC"
   ];
 
-  // Repeat the instrument list to reach at least 1000 items
   while (instruments.length < 1000) {
     instruments.push(...instruments.slice(0, 1000 - instruments.length));
   }

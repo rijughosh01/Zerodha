@@ -18,7 +18,7 @@ function Navbar() {
   useEffect(() => {
     const checkDashboardStatus = async () => {
       try {
-        await axios.get("http://localhost:3001");
+        await axios.get("https://my-dashboard-eight-wine.vercel.app/");
         setIsDashboardRunning(true);
       } catch (error) {
         setIsDashboardRunning(false);

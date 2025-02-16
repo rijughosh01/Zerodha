@@ -6,7 +6,7 @@ const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3002/allHoldings")
+    axios.get("https://my-backend-phi.vercel.app/allHoldings")
       .then((res) => {
         setAllHoldings(res.data);
       })
