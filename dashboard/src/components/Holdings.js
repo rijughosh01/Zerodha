@@ -6,6 +6,51 @@ const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
   useEffect(() => {
+    //Instrument names
+    const instrumentNames = [
+      "BHARTIARTL", "HDFCBANK", "HINDUNILVR", "INFY", "ITC",
+      "KPITTECH", "M&M", "RELIANCE", "SBIN", "SGBMAY29",
+      "TATAPOWER", "TCS", "WIPRO", "ADANIGREEN", "ASIANPAINT",
+      "AXISBANK", "BAJFINANCE", "BPCL", "BRITANNIA", "CIPLA",
+      "COALINDIA", "DIVISLAB", "DRREDDY", "EICHERMOT", "GAIL",
+      "GRASIM", "HCLTECH", "HEROMOTOCO", "HINDALCO", "ICICIBANK",
+      "INDUSINDBK", "IOC", "JSWSTEEL", "KOTAKBANK", "LT",
+      "MARUTI", "NESTLEIND", "NTPC", "ONGC", "POWERGRID",
+      "SBILIFE", "SHREECEM", "SUNPHARMA", "TATACONSUM", "TATASTEEL",
+      "TECHM", "TITAN", "ULTRACEMCO", "UPL", "VEDL",
+      "YESBANK", "ZEEL", "ABBOTINDIA", "ADANIPORTS", "AMBUJACEM",
+      "AUROPHARMA", "BAJAJFINSV", "BANDHANBNK", "BANKBARODA", "BEL",
+      "BERGEPAINT", "BIOCON", "BOSCHLTD", "CADILAHC", "CANBK",
+      "CASTROLIND", "CHOLAFIN", "CUB", "DALBHARAT", "DABUR",
+      "DEEPAKNTR", "DHFL", "DLF", "EDELWEISS", "ESCORTS",
+      "EXIDEIND", "FEDERALBNK", "FORTIS", "GODREJCP", "GODREJIND",
+      "GODREJPROP", "HAVELLS", "HINDCOPPER", "HINDPETRO", "IBULHSGFIN",
+      "IDBI", "IDEA", "IDFCFIRSTB", "IRCTC", "ITI",
+      "JINDALSTEL", "JUBLFOOD", "L&TFH", "LICHSGFIN", "LUPIN",
+      "MFSL", "MOTHERSUMI", "MPHASIS", "MRF", "NAM-INDIA",
+      "NIACL", "NMDC", "OBEROIRLTY", "PEL", "PIIND",
+      "PNB", "PRESTIGE", "RBLBANK", "RECLTD", "SBICARD",
+      "SRF", "SRTRANSFIN", "STAR", "SUNTV", "SYMPHONY",
+      "TATACHEM", "TATAELXSI", "TATACOMM", "TRENT", "TV18BRDCST",
+      "TVSMOTOR", "UBL", "UNIONBANK", "VBL", "VOLTAS",
+      "WELCORP", "YESBANK", "ZEEL", "ZYDUSWELL"
+    ];
+
+    // Generate dummy data 
+    let dummyData = [];
+    for (let i = 0; i < 260; i++) {
+      dummyData.push({
+        name: instrumentNames[i % instrumentNames.length],
+        qty: Math.floor(Math.random() * 100) + 1,
+        avg: parseFloat((Math.random() * 1000).toFixed(2)),
+        price: parseFloat((Math.random() * 1000).toFixed(2)),
+        net: `${(Math.random() * 100).toFixed(2)}%`,
+        day: `${(Math.random() * 10).toFixed(2)}%`,
+        isLoss: Math.random() > 0.5,
+      });
+    }
+    setAllHoldings(dummyData);
+
     axios.get("https://my-backend-phi.vercel.app/allHoldings")
       .then((res) => {
         setAllHoldings(res.data);
@@ -15,7 +60,7 @@ const Holdings = () => {
       });
   }, []);
 
-  const labels = allHoldings.map((subArray) => subArray["name"]);
+  const labels = allHoldings.map((stock) => stock.name);
 
   const data = {
     labels,
