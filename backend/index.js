@@ -11,7 +11,7 @@ const { HoldingsModel } = require("./model/HoldingsModel");
 const { PositionsModel } = require("./model/PositionsModel");
 const { OrdersModel } = require("./model/OrdersModel");
 
-const PORT = process.env.PORT || 3002;
+const PORT = ("https://my-dashboard-eight-wine.vercel.app/");
 const uri = process.env.MONGO_URL;
 
 const app = express();
