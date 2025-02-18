@@ -1,48 +1,321 @@
 .orders {
-    padding: 20px;
-  }
-  
-  .orders-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .new-gtt-btn,
-  .download-btn {
-    padding: 8px 16px;
-    margin-left: 10px;
-  }
-  
-  .search-bar {
-    flex: 1;
-    margin-left: 20px;
-    padding: 8px;
-  }
-  
-  .orders-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .orders-table th,
-  .orders-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  .order-type.sell {
-    color: red;
-  }
-  
-  .order-type.buy {
-    color: green;
-  }
-  
-  .status.active {
-    color: green;
-    font-weight: bold;
-  }
-  
+  padding: 20px;
+}
+
+.topbar {
+  background: #f8f8f8;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.tab {
+  margin-right: 15px;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+.tab.active {
+  border-bottom: 3px solid orange;
+}
+
+.actions {
+  display: none;
+}
+
+.search-bar, .search-btn, .download-btn {
+  display: none;
+}
+
+.market-indices,
+.stock-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.market-indices span,
+.stock-list span {
+  padding: 5px 3px;
+  background: #f1f1f1;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.stock-list span {
+  color: black;
+}
+
+.stock-list span[data-change="up"] {
+  color: green;
+}
+
+.stock-list span[data-change="down"] {
+  color: red;
+}
+
+.orders-section {
+  margin-bottom: 20px;
+}
+
+.orders-section h3 {
+  margin-bottom: 10px;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table th,
+.orders-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.orders-table th {
+  background: #f1f1f1;
+}
+
+.order-type.sell {
+  color: red;
+}
+
+.order-type.buy {
+  color: green;
+}
+
+.status.active {
+  color: green;
+  font-weight: bold;
+}
+
+.status.open {
+  color: orange;
+}
+
+.status.executed {
+  color: green;
+}
+
+
+/* GTT Orders */
+
+.gtt-orders {
+  padding: 20px;
+}
+
+.gtt-orders h3 {
+  margin-bottom: 20px;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table th, .orders-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.orders-table th {
+  background-color: #f2f2f2;
+}
+
+.status.active {
+  color: green;
+}
+
+.status.triggered {
+  color: orange;
+}
+
+
+/* Baskets */
+
+.baskets {
+  padding: 20px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.new-basket {
+  padding: 10px 40px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.search-bar {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.baskets-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.baskets-table th, .baskets-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.baskets-table th {
+  background-color: #f2f2f2;
+}
+
+
+/* SIP Orders */
+
+.sip-orders {
+  padding: 20px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border: none;
+}
+
+.new-sip {
+  padding: 10px 40px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.search-bar {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-right: 20px;
+}
+
+.sip-columns {
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+}
+
+.column h4 {
+  margin-bottom: 10px;
+}
+
+.column div {
+  margin-bottom: 10px;
+}
+
+.status.active {
+  color: green;
+}
+
+.status.paused {
+  color: red;
+}
+
+
+/* Alerts */
+
+.alerts {
+  padding: 20px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border: none;
+}
+
+.new-alert {
+  padding: 10px 40px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.search-bar {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-right: 20px;
+}
+
+.alerts-columns {
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+}
+
+.column h4 {
+  margin-bottom: 10px;
+}
+
+.alert-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.alert-item > div {
+  display: flex;
+  align-items: center;
+}
+
+.alert-checkbox {
+  margin-right: 10px;
+}
+
+.condition {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.status.enabled {
+  color: green;
+  font-weight: bold;
+}
+
+.status.disabled {
+  color: red;
+  font-weight: bold;
+}
