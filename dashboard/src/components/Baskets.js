@@ -1,39 +1,43 @@
-import React from 'react';
+import React from "react";
 
 const Baskets = () => {
   const basketsData = [
     {
       name: "Bull call spread",
       items: 2,
-      createdOn: "2021-09-24"
+      createdOn: "2021-09-24",
     },
     {
       name: "Calender spread",
       items: 2,
-      createdOn: "2023-05-08"
+      createdOn: "2023-05-08",
     },
     {
       name: "Butterfly Spread",
       items: 3,
-      createdOn: "2023-05-08"
+      createdOn: "2023-05-08",
     },
     {
       name: "IT stocks",
       items: 4,
-      createdOn: "2023-05-08"
+      createdOn: "2023-05-08",
     },
     {
       name: "ETFs",
       items: 4,
-      createdOn: "2023-05-08"
-    }
+      createdOn: "2023-05-08",
+    },
   ];
 
   return (
     <div className="baskets">
       <div className="topbar">
         <button className="new-basket">New basket</button>
-        <input type="text" placeholder="Search baskets" className="search-bar" />
+        <input
+          type="text"
+          placeholder="Search baskets"
+          className="search-bar"
+        />
       </div>
       <h3>Baskets (5)</h3>
       <table className="baskets-table">

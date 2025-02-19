@@ -13,28 +13,172 @@ function Footer() {
           </div>
           <div className="col">
             <p>Company</p>
-            <a href="" style={{ textDecoration: "none", display: "block", margin: "5px 0" }}>About</a>
-            <a href="" style={{ textDecoration: "none", display: "block", margin: "5px 0" }}>Products</a>
-            <a href="" style={{ textDecoration: "none", display: "block", margin: "5px 0" }}>Pricing</a>
-            <a href="" style={{ textDecoration: "none", display: "block", margin: "5px 0" }}>Referral programme</a>
-            <a href="" style={{ textDecoration: "none", display: "block", margin: "5px 0" }}>Careers</a>
-            <a href="" style={{ textDecoration: "none", display: "block", margin: "5px 0" }}>Zerodha.tech</a>
-            <a href="" style={{ textDecoration: "none", display: "block", margin: "5px 0" }}>Press & media</a>
-            <a href="" style={{ textDecoration: "none", display: "block", margin: "5px 0" }}>Zerodha cares (CSR)</a>
+            <a
+              href=""
+              style={{
+                textDecoration: "none",
+                display: "block",
+                margin: "5px 0",
+              }}
+            >
+              About
+            </a>
+            <a
+              href=""
+              style={{
+                textDecoration: "none",
+                display: "block",
+                margin: "5px 0",
+              }}
+            >
+              Products
+            </a>
+            <a
+              href=""
+              style={{
+                textDecoration: "none",
+                display: "block",
+                margin: "5px 0",
+              }}
+            >
+              Pricing
+            </a>
+            <a
+              href=""
+              style={{
+                textDecoration: "none",
+                display: "block",
+                margin: "5px 0",
+              }}
+            >
+              Referral programme
+            </a>
+            <a
+              href=""
+              style={{
+                textDecoration: "none",
+                display: "block",
+                margin: "5px 0",
+              }}
+            >
+              Careers
+            </a>
+            <a
+              href=""
+              style={{
+                textDecoration: "none",
+                display: "block",
+                margin: "5px 0",
+              }}
+            >
+              Zerodha.tech
+            </a>
+            <a
+              href=""
+              style={{
+                textDecoration: "none",
+                display: "block",
+                margin: "5px 0",
+              }}
+            >
+              Press & media
+            </a>
+            <a
+              href=""
+              style={{
+                textDecoration: "none",
+                display: "block",
+                margin: "5px 0",
+              }}
+            >
+              Zerodha cares (CSR)
+            </a>
           </div>
           <div className="col">
             <p>Support</p>
-            <a href="" style={{ textDecoration: "none", display: "block", margin: "5px 0" }}>Contact</a>
-            <a href="" style={{ textDecoration: "none", display: "block", margin: "5px 0" }}>Support portal</a>
-            <a href="" style={{ textDecoration: "none", display: "block", margin: "5px 0" }}>Z-Connect blog</a>
-            <a href="" style={{ textDecoration: "none", display: "block", margin: "5px 0" }}>List of charges</a>
-            <a href="" style={{ textDecoration: "none", display: "block", margin: "5px 0" }}>Downloads & resources</a>
+            <a
+              href=""
+              style={{
+                textDecoration: "none",
+                display: "block",
+                margin: "5px 0",
+              }}
+            >
+              Contact
+            </a>
+            <a
+              href=""
+              style={{
+                textDecoration: "none",
+                display: "block",
+                margin: "5px 0",
+              }}
+            >
+              Support portal
+            </a>
+            <a
+              href=""
+              style={{
+                textDecoration: "none",
+                display: "block",
+                margin: "5px 0",
+              }}
+            >
+              Z-Connect blog
+            </a>
+            <a
+              href=""
+              style={{
+                textDecoration: "none",
+                display: "block",
+                margin: "5px 0",
+              }}
+            >
+              List of charges
+            </a>
+            <a
+              href=""
+              style={{
+                textDecoration: "none",
+                display: "block",
+                margin: "5px 0",
+              }}
+            >
+              Downloads & resources
+            </a>
           </div>
           <div className="col">
             <p>Account</p>
-            <a href="" style={{ textDecoration: "none", display: "block", margin: "5px 0" }}>Open an account</a>
-            <a href="" style={{ textDecoration: "none", display: "block", margin: "5px 0" }}>Fund transfer</a>
-            <a href="" style={{ textDecoration: "none", display: "block", margin: "5px 0" }}>60 day challenge</a>
+            <a
+              href=""
+              style={{
+                textDecoration: "none",
+                display: "block",
+                margin: "5px 0",
+              }}
+            >
+              Open an account
+            </a>
+            <a
+              href=""
+              style={{
+                textDecoration: "none",
+                display: "block",
+                margin: "5px 0",
+              }}
+            >
+              Fund transfer
+            </a>
+            <a
+              href=""
+              style={{
+                textDecoration: "none",
+                display: "block",
+                margin: "5px 0",
+              }}
+            >
+              60 day challenge
+            </a>
           </div>
         </div>
         <div className="mt-5 text-muted" style={{ fontSize: "14px" }}>

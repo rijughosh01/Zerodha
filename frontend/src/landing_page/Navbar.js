@@ -67,7 +67,11 @@ function Navbar() {
           <form className="d-flex" role="search">
             <ul className="navbar-nav mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/signup">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/signup"
+                >
                   Signup
                 </Link>
               </li>
@@ -100,7 +104,11 @@ function Navbar() {
               )}
               {isLoggedIn && (
                 <li className="nav-item">
-                  <span className="nav-link active" onClick={handleLogout} style={{ cursor: "pointer" }}>
+                  <span
+                    className="nav-link active"
+                    onClick={handleLogout}
+                    style={{ cursor: "pointer" }}
+                  >
                     Logout
                   </span>
                 </li>

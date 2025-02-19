@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-
 import { Link } from "react-router-dom";
+import "./Orders.css";
 
 const Menu = () => {
   const [selectedMenu, setSelectedMenu] = useState(0);
@@ -10,7 +10,7 @@ const Menu = () => {
     setSelectedMenu(index);
   };
 
-  const handleProfileClick = (index) => {
+  const handleProfileClick = () => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
   };
 
@@ -94,6 +94,41 @@ const Menu = () => {
           <div className="avatar">PG</div>
           <p className="username">USERID</p>
         </div>
+        {isProfileDropdownOpen && (
+          <div className="popup-window open">
+            <div className="popup-header">
+              <strong>Pritam Ghosh</strong>
+              <div className="popup-email">pg4009355@gmail.com</div>
+            </div>
+            <div className="popup-item">
+              <i className="fas fa-user-cog"></i> My profile / Settings
+            </div>
+            <div className="popup-item">
+              <i className="fas fa-tachometer-alt"></i> Console
+            </div>
+            <div className="popup-item">
+              <i className="fas fa-coins"></i> Coin
+            </div>
+            <div className="popup-item">
+              <i className="fas fa-headset"></i> Support
+            </div>
+            <div className="popup-item">
+              <i className="fas fa-user-friends"></i> Invite friends
+            </div>
+            <div className="popup-item">
+              <i className="fas fa-map-signs"></i> Tour Kite
+            </div>
+            <div className="popup-item">
+              <i className="fas fa-keyboard"></i> Keyboard shortcuts
+            </div>
+            <div className="popup-item">
+              <i className="fas fa-book"></i> User manual
+            </div>
+            <div className="popup-item">
+              <i className="fas fa-sign-out-alt"></i> Logout
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

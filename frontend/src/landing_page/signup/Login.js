@@ -1,18 +1,17 @@
-import React, { useState } from 'react';
-import { auth } from '../firebase';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-
+import React, { useState } from "react";
+import { auth } from "../firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   // Handle Login
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      alert('Login successful');
+      alert("Login successful");
     } catch (error) {
       alert(error.message);
     }
@@ -21,7 +20,11 @@ const Login = () => {
   return (
     <div className="login-container">
       <div className="login-left">
-        <img src="media/images/login.png" alt="Login Promo" className="login-image" />
+        <img
+          src="media/images/login.png"
+          alt="Login Promo"
+          className="login-image"
+        />
       </div>
       <div className="login-right">
         <form onSubmit={handleLogin} className="login-form">
@@ -42,14 +45,18 @@ const Login = () => {
             required
             className="login-input"
           />
-          <button type="submit" className="login-button">Login</button>
+          <button type="submit" className="login-button">
+            Login
+          </button>
         </form>
         <div className="additional-info">
           <p>© 2025. All rights reserved.</p>
           <p>Support</p>
           <p>
-            NSE​ &​ BSE – SEBI Registration no.: INZ000031633<br />
-            MCX - SEBI Registration no.: INZ000038238<br />
+            NSE​ &​ BSE – SEBI Registration no.: INZ000031633
+            <br />
+            MCX - SEBI Registration no.: INZ000038238
+            <br />
             CDSL - SEBI Registration no.: IN-DP-431-2019
           </p>
         </div>

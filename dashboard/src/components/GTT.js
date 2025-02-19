@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const GTT = () => {
   const gttOrders = [
@@ -10,7 +10,7 @@ const GTT = () => {
       trigger: "47.80 (-3.04%), 52.85 (7.2%)",
       ltp: "49.30",
       quantity: "1 / 1",
-      status: "ACTIVE"
+      status: "ACTIVE",
     },
     {
       createdOn: "2023-05-04",
@@ -20,7 +20,7 @@ const GTT = () => {
       trigger: "6.65 (-5.67%)",
       ltp: "7.05",
       quantity: "1",
-      status: "ACTIVE"
+      status: "ACTIVE",
     },
     {
       createdOn: "2023-02-06",
@@ -30,7 +30,7 @@ const GTT = () => {
       trigger: "136.20 (-18.49%)",
       ltp: "167.10",
       quantity: "1",
-      status: "ACTIVE"
+      status: "ACTIVE",
     },
     {
       createdOn: "2023-05-09",
@@ -40,7 +40,7 @@ const GTT = () => {
       trigger: "50.40, 51.45",
       ltp: "—",
       quantity: "50 / 50",
-      status: "TRIGGERED"
+      status: "TRIGGERED",
     },
     {
       createdOn: "2023-05-09",
@@ -50,8 +50,8 @@ const GTT = () => {
       trigger: "50.00, 51.05",
       ltp: "—",
       quantity: "50 / 50",
-      status: "TRIGGERED"
-    }
+      status: "TRIGGERED",
+    },
   ];
 
   return (
@@ -80,7 +80,11 @@ const GTT = () => {
               <td>{order.trigger}</td>
               <td>{order.ltp}</td>
               <td>{order.quantity}</td>
-              <td><span className={`status ${order.status.toLowerCase()}`}>{order.status}</span></td>
+              <td>
+                <span className={`status ${order.status.toLowerCase()}`}>
+                  {order.status}
+                </span>
+              </td>
             </tr>
           ))}
         </tbody>

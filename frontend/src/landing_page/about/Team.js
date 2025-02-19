@@ -14,7 +14,12 @@ function Team() {
         <div className="col-md-6 p-3 text-center">
           <img
             src="media/images/nithinKamath.jpg"
-            style={{ borderRadius: "50%", width: "200px", height: "200px", objectFit: "cover" }}
+            style={{
+              borderRadius: "50%",
+              width: "200px",
+              height: "200px",
+              objectFit: "cover",
+            }}
             alt="Nithin Kamath"
           />
           <h4 className="mt-4">Nithin Kamath</h4>
@@ -33,9 +38,20 @@ function Team() {
           <p>Playing basketball is his zen.</p>
           <p>
             Connect on
-            <a href="" style={{ textDecoration: "none", color: "#007bff" }}> Homepage</a> /
-            <a href="" style={{ textDecoration: "none", color: "#007bff" }}> TradingQnA</a> /
-            <a href="" style={{ textDecoration: "none", color: "#007bff" }}> Twitter</a>
+            <a href="" style={{ textDecoration: "none", color: "#007bff" }}>
+              {" "}
+              Homepage
+            </a>{" "}
+            /
+            <a href="" style={{ textDecoration: "none", color: "#007bff" }}>
+              {" "}
+              TradingQnA
+            </a>{" "}
+            /
+            <a href="" style={{ textDecoration: "none", color: "#007bff" }}>
+              {" "}
+              Twitter
+            </a>
           </p>
         </div>
       </div>

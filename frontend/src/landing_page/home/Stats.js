@@ -32,12 +32,10 @@ function Stats() {
           <img src="media/images/ecosystem.png" style={{ width: "90%" }} />
           <div className="text-center">
             <a href="" className="mx-5" style={{ textDecoration: "none" }}>
-              Explore our products{" "}
-              <i className="fas fa-arrow-right"></i>
+              Explore our products <i className="fas fa-arrow-right"></i>
             </a>
             <a href="" style={{ textDecoration: "none" }}>
-              Try Kite demo{" "}
-              <i className="fas fa-arrow-right"></i>
+              Try Kite demo <i className="fas fa-arrow-right"></i>
             </a>
           </div>
         </div>

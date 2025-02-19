@@ -4,8 +4,8 @@ import "./Funds.css";
 
 const Funds = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [availableMargin, setAvailableMargin] = useState(4043.10);
-  const [usedMargin, setUsedMargin] = useState(3757.30);
+  const [availableMargin, setAvailableMargin] = useState(4043.1);
+  const [usedMargin, setUsedMargin] = useState(3757.3);
   const [addAmount, setAddAmount] = useState("");
 
   const handleAddFunds = () => {
@@ -113,7 +113,10 @@ const Funds = () => {
               <button className="btn btn-green" onClick={handleAddFunds}>
                 Add
               </button>
-              <button className="btn btn-grey" onClick={() => setIsModalOpen(false)}>
+              <button
+                className="btn btn-grey"
+                onClick={() => setIsModalOpen(false)}
+              >
                 Cancel
               </button>
             </div>

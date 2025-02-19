@@ -1,5 +1,5 @@
-import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAZzE5VmZt_UqAt2GvG3FdTYdwaGf9NtrM",
@@ -8,7 +8,7 @@ const firebaseConfig = {
   storageBucket: "fitness-tracker-99f9e.firebasestorage.app",
   messagingSenderId: "304135597636",
   appId: "1:304135597636:web:a26aabfa920ff60626d611",
-  measurementId: "G-V7FRRWCFVE"
+  measurementId: "G-V7FRRWCFVE",
 };
 
 // Initialize Firebase

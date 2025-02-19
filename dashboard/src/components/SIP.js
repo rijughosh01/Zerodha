@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const SIP = () => {
   const weeklySIPData = [
@@ -10,25 +10,23 @@ const SIP = () => {
         "28th at 09:30 (in 10 days)",
         "1st at 09:30 (in 11 days)",
         "7th at 09:30 (in 17 days)",
-        "14th at 09:30 (in 24 days)"
+        "14th at 09:30 (in 24 days)",
       ],
       associatedBasket: "IT stocks",
       createdOn: "2022-10-24",
-      monthsAgo: 28
-    }
+      monthsAgo: 28,
+    },
   ];
 
   const monthlySIPData = [
     {
       name: "Monthly SIPs",
       status: "PAUSED",
-      schedule: [
-        "3rd at 09:30 (in 13 days)"
-      ],
+      schedule: ["3rd at 09:30 (in 13 days)"],
       associatedBasket: "ETFs",
       createdOn: "2023-02-15",
-      monthsAgo: 24
-    }
+      monthsAgo: 24,
+    },
   ];
 
   return (
@@ -43,11 +41,28 @@ const SIP = () => {
           <h4>Weekly SIPs</h4>
           {weeklySIPData.map((sip, index) => (
             <div key={index}>
-              <div><strong>Name:</strong> {sip.name}</div>
-              <div><strong>Status:</strong> <span className={`status ${sip.status.toLowerCase()}`}>{sip.status}</span></div>
-              <div><strong>Schedule:</strong> {sip.schedule.map((item, i) => <div key={i}>{item}</div>)}</div>
-              <div><strong>Associated Basket:</strong> {sip.associatedBasket}</div>
-              <div><strong>Created On:</strong> {sip.createdOn} ({sip.monthsAgo} months ago)</div>
+              <div>
+                <strong>Name:</strong> {sip.name}
+              </div>
+              <div>
+                <strong>Status:</strong>{" "}
+                <span className={`status ${sip.status.toLowerCase()}`}>
+                  {sip.status}
+                </span>
+              </div>
+              <div>
+                <strong>Schedule:</strong>{" "}
+                {sip.schedule.map((item, i) => (
+                  <div key={i}>{item}</div>
+                ))}
+              </div>
+              <div>
+                <strong>Associated Basket:</strong> {sip.associatedBasket}
+              </div>
+              <div>
+                <strong>Created On:</strong> {sip.createdOn} ({sip.monthsAgo}{" "}
+                months ago)
+              </div>
             </div>
           ))}
         </div>
@@ -55,11 +70,28 @@ const SIP = () => {
           <h4>Monthly SIPs</h4>
           {monthlySIPData.map((sip, index) => (
             <div key={index}>
-              <div><strong>Name:</strong> {sip.name}</div>
-              <div><strong>Status:</strong> <span className={`status ${sip.status.toLowerCase()}`}>{sip.status}</span></div>
-              <div><strong>Schedule:</strong> {sip.schedule.map((item, i) => <div key={i}>{item}</div>)}</div>
-              <div><strong>Associated Basket:</strong> {sip.associatedBasket}</div>
-              <div><strong>Created On:</strong> {sip.createdOn} ({sip.monthsAgo} months ago)</div>
+              <div>
+                <strong>Name:</strong> {sip.name}
+              </div>
+              <div>
+                <strong>Status:</strong>{" "}
+                <span className={`status ${sip.status.toLowerCase()}`}>
+                  {sip.status}
+                </span>
+              </div>
+              <div>
+                <strong>Schedule:</strong>{" "}
+                {sip.schedule.map((item, i) => (
+                  <div key={i}>{item}</div>
+                ))}
+              </div>
+              <div>
+                <strong>Associated Basket:</strong> {sip.associatedBasket}
+              </div>
+              <div>
+                <strong>Created On:</strong> {sip.createdOn} ({sip.monthsAgo}{" "}
+                months ago)
+              </div>
             </div>
           ))}
         </div>

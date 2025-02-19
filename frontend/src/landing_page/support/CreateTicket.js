@@ -134,7 +134,11 @@ function CreateTicket() {
 
             <div className="col-md-6 col-lg-4 p-3">
               <h4 style={{ color: "grey" }}>
-              <i class="fa fa-signal" aria-hidden="true" style={{ marginRight: "8px" }}></i>
+                <i
+                  class="fa fa-signal"
+                  aria-hidden="true"
+                  style={{ marginRight: "8px" }}
+                ></i>
                 Trading and Markets
               </h4>
               <ul className="list-unstyled">
