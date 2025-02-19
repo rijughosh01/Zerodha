@@ -218,3 +218,32 @@
   background: #9b9b9b;
   color: #fff;
 }
+
+/* Top Bar */
+
+.indices-container {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.nifty,
+.nifty-it,
+.sensex,
+.sensex-auto,
+.sensex-energy {
+  display: inline-block;
+  padding: 10px;
+  animation: marquee 15s linear infinite;
+  min-width: 80px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
